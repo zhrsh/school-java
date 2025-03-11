@@ -10,7 +10,7 @@ class User {
     protected String userId;
 
     /**
-     * constructor utk kelas User
+     * constructor utk class User
      * 
      * @param username nama pengguna
      * @param userId id pengguna
@@ -36,7 +36,7 @@ class User {
  */
 class Admin extends User {
     /**
-     * constructor utk kelas Admin.
+     * constructor utk class Admin.
      * @param username nama pengguna
      * @param userId id pengguna
      */
@@ -83,7 +83,7 @@ class Admin extends User {
  */
 class Member extends User {
     /**
-     * Constructor utk kelas Member.
+     * Constructor utk class Member.
      * 
      * @param username nama pengguna
      * @param userId id pengguna
@@ -95,7 +95,7 @@ class Member extends User {
     /**
      * POLYMORPHISM: menggunakan method override (dengan tag @Override)
      * 
-     * Method ini di-override utk memberikan implementasi khusus bagi member 
+     * method ini di-override utk memberikan implementasi khusus bagi member 
      * saat berinteraksi dengan sistem perpustakaan.
      */
     @Override
@@ -126,7 +126,7 @@ class Member extends User {
  * main class utk menjalankan program sistem manajemen perpustakaan.
  * 
  * class ini berfungsi sebagai titik masuk (entry point) utk aplikasi, 
- * di mana objek Admin dan Member dibuat dan interaksi dengan sistem perpustakaan dilakukan.
+ * di mana object Admin dan Member dibuat dan interaksi dengan sistem perpustakaan dilakukan.
  */
 public class SistemPerpus {
     public static void main(String[] args) {
@@ -135,14 +135,14 @@ public class SistemPerpus {
         Member member1 = new Member("John", "002");
 
         // menggunakan polymorphism (dynamic method dispatch)
-        admin1.interact(); // method interact khusus Admin
-        member1.interact(); // method interact khusus Member
+        admin1.interact(); // method interact() khusus Admin
+        member1.interact(); // method interact() khusus Member
 
-        // objek Admin menambah dan menghapus buku
+        // object Admin menambah dan menghapus buku
         admin1.addBook("The Shining");
         admin1.removeBook("The Tell Tale Heart");
 
-        // objek Member meminjam dan mengembalikan buku
+        // object Member meminjam dan mengembalikan buku
         member1.borrowBook("The Shining");
         member1.returnBook("The Shining");
     }
