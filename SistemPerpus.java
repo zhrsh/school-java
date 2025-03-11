@@ -1,3 +1,8 @@
+/*
+ * TK1 DSAA - group 4
+ * No. 1
+ */
+
 /**
  * parent class 'User'
  * 
@@ -37,8 +42,8 @@ class User {
 class Admin extends User {
     /**
      * constructor utk class Admin.
-     * @param username nama pengguna
-     * @param userId id pengguna
+     * @param username nama pengguna admin
+     * @param userId id pengguna admin
      */
     public Admin(String username, String userId) {
         // super() utk memanggil constructor dari superclass/parent class (User)
@@ -85,8 +90,8 @@ class Member extends User {
     /**
      * Constructor utk class Member.
      * 
-     * @param username nama pengguna
-     * @param userId id pengguna
+     * @param username nama penguna member
+     * @param userId id pengguna member
      */
     public Member(String username, String userId) {
         super(username, userId);
@@ -130,20 +135,24 @@ class Member extends User {
  */
 public class SistemPerpus {
     public static void main(String[] args) {
-        // membuat object Admin dan Member dengan upcasting (instance dari User)
-        Admin admin1 = new Admin("Jane", "001");
-        Member member1 = new Member("John", "002");
+        // membuat 1 object Admin dan 2 object Member dengan upcasting (instance dari User)
+        Admin admin1 = new Admin("AdaLovelace", "001");
+        Member member1 = new Member("JaneDoe", "002");
+        Member member2 = new Member("JohnDoe", "003");
 
         // menggunakan polymorphism (dynamic method dispatch)
-        admin1.interact(); // method interact() khusus Admin
-        member1.interact(); // method interact() khusus Member
+        admin1.interact(); // method interact() khusus obj Admin
+        member1.interact(); // method interact() khusus obj Member
+        member2.interact(); // method interact() khusus obj Member
 
-        // object Admin menambah dan menghapus buku
+        // contoh object Admin menambah dan menghapus buku
         admin1.addBook("The Shining");
+        admin1.addBook("The Call of Cthulhu");
         admin1.removeBook("The Tell Tale Heart");
 
-        // object Member meminjam dan mengembalikan buku
+        // contoh object Member meminjam dan mengembalikan buku
         member1.borrowBook("The Shining");
         member1.returnBook("The Shining");
+        member2.borrowBook("The Call of Cthulhu");
     }
 }
