@@ -1,5 +1,8 @@
 import java.util.Arrays;
 
+/**
+ * Class ini menyediakan operasi dasar untuk Array yang menyimpan nilai integer.
+ */
 public class ArrayOperations {
     private int[] array;
     private int size;
@@ -15,8 +18,8 @@ public class ArrayOperations {
     }
 
     /**
-     * Print pesan dengan format kelas ini
-     *
+     * Print pesan dengan format untuk Array
+     * 
      * @param message pesan yang akan diprint.
      */
     public void arrayPrintln(String message) {
@@ -24,7 +27,7 @@ public class ArrayOperations {
     }
 
     /**
-     * Print pesan tanpa newline dengan format kelas ini
+     * Print pesan tanpa newline dengan format untuk Array
      *
      * @param message pesan yang akan di print.
      */
