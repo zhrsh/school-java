@@ -12,7 +12,14 @@ public class Main {
         myArr.traversal();
 
         // arraylist
-
+        ArrayListOperations myArrList = new ArrayListOperations();
+        myArrList.traversal();
+        myArrList.add(false, 10, 60, 30, 20, 40);
+        myArrList.traversal();
+        myArrList.delete(10);
+        myArrList.pencarianLinear(30);
+        myArrList.add(true, 50);
+        myArrList.sort();
 
     }
 }
