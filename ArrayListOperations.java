@@ -16,6 +16,7 @@ public class ArrayListOperations {
 
     /**
      * Print pesan dengan format untuk ArrayList
+     * pesan akan di print dengan warna biru (\u001B[34m, dan \u001B[0m untuk reset)
      *
      * @param message Pesan yang akan diprint.
      */
@@ -53,7 +54,13 @@ public class ArrayListOperations {
      */
     public int pencarianLinear(int value) {
         int index = arrayList.indexOf(value);
-        arraylistPrintln("pencarian linear: nilai " + value + " ditemukan pada index ke-" + index);
+        
+        if (index == -1) {
+            arraylistPrintln("pencarian linear: nilai " + value + " tidak ditemukan.");
+        } else {
+            arraylistPrintln("pencarian linear: nilai " + value + " ditemukan pada index ke-" + index);
+        }
+        
         return index;
     }
 
@@ -66,7 +73,7 @@ public class ArrayListOperations {
         if (!arrayList.remove(Integer.valueOf(value))) {
             arraylistPrintln("nilai tidak ditemukan untuk dihapus.");
         } else {
-            arraylistPrintln("nilai " + value +  " telah dihapus");
+            arraylistPrintln("penghapusan: nilai " + value +  " telah dihapus");
         }
     }
 

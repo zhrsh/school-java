@@ -18,7 +18,8 @@ public class ArrayOperations {
     }
 
     /**
-     * Print pesan dengan format untuk Array
+     * Print pesan dengan format untuk kelas ArrayOperations
+     * Pesan akan di print dengan warna kuning (\u001B[33m, dan \u001B[0m untuk reset)
      * 
      * @param message pesan yang akan diprint.
      */
@@ -115,12 +116,13 @@ public class ArrayOperations {
             array = newArray;
         }
         if (index < 0 || index > size) {
-            arrayPrintln("Index tidak valid.");
+            arrayPrintln("index tidak valid.");
             return;
         }
         System.arraycopy(array, index, array, index + 1, size - index);
         array[index] = value;
         size++;
+        arrayPrintln("penambahan: nilai " + value + " telah ditambahkan");
     }
 
     /**
