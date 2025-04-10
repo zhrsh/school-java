@@ -108,6 +108,13 @@ public class Comparison {
         }
     }
 
+    /**
+     * Mencetak grafik hasil perbandingan waktu operasi antara array dan ArrayList (Method overloading)
+     * 
+     * @param col1 Nama kolom untuk operasi yang sedang dibandingkan.
+     * @param colArray waktu yang dibutuhkan untuk operasi pada array dalam ms.
+     * @param colArrayList waktu yang dibutuhkan untuk operasi pada ArrayList dalam ms.
+     */
     private static void printGraph(String col1, double colArray, double colArrayList) {
         String formattedArray = String.format("%.6f", colArray);
         String formattedArrayList = String.format("%.6f", colArrayList);
@@ -119,7 +126,15 @@ public class Comparison {
         );
     }
 
-    // method overload utk string
+    /**
+     * Mencetak grafik hasil perbandingan waktu operasi antara array dan ArrayList (Method overloading)
+     * 
+     * Metode ini digunakan untuk mencetak hasil dalam format yang terformat dengan baik.
+     * 
+     * @param col1 Nama kolom untuk operasi yang sedang dibandingkan.
+     * @param strArray Waktu yang dibutuhkan untuk operasi pada array dalam format string.
+     * @param strArrayList Waktu yang dibutuhkan untuk operasi pada ArrayList dalam format string.
+     */
     private static void printGraph(String col1, String strArray, String strArrayList) {
         System.out.printf("%-20s %-20s %-20s%n", 
             col1, 
@@ -131,7 +146,7 @@ public class Comparison {
     /**
      * Menghasilkan array data uji dengan nilai acak.
      *
-     * metode ini menghasilkan array integer dengan ukuran yang ditentukan,
+     * Metode ini menghasilkan array integer dengan ukuran yang ditentukan,
      * di mana setiap elemen dalam array diisi dengan nilai acak antara 0 hingga 99.
      *
      * @param size ukuran array yang ingin dihasilkan.
@@ -149,5 +164,4 @@ public class Comparison {
         }
         return data;
     }
-
 }
