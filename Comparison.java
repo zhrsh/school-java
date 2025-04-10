@@ -1,3 +1,8 @@
+/**
+ * Tugas DSAA LAB Zahra A.S. (REMOVED)
+ * Comparison.java
+ */
+
 import java.util.Random;
 
 public class Comparison {

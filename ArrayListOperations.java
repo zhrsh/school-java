@@ -1,3 +1,8 @@
+/**
+ * Tugas DSAA LAB Zahra A.S. (REMOVED)
+ * ArrayListOperations.java
+ */
+
 import java.util.ArrayList;
 import java.util.Collections;
 
