@@ -10,6 +10,7 @@ public class SinglyLinkedList {
     // menambahkan node di akhir linked list
     public void add(int data) {
         Node newNode = new Node(data);
+        System.out.println("new node in address: " + newNode + ", with data: " + data);
         if (head == null) {
             head = newNode;
         } else {
