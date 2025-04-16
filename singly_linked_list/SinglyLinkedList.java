@@ -1,19 +1,10 @@
+package singly_linked_list;
 /**
- * TP2 DSA - singly linked list
+ * SinglyLinkedList.java
  * tugas zahra a. s.
  */
-class Node {
-    int data;
-    Node next;
 
-    // constructor
-    public Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
-class SinglyLinkedList {
+public class SinglyLinkedList {
     private Node head;
 
     // menambahkan node di akhir linked list
@@ -62,25 +53,5 @@ class SinglyLinkedList {
 
         // menghapus node
         previous.next = current.next;
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.add(5);
-        list.add(10);
-        list.add(15);
-        list.add(30);
-
-        System.out.println("isi Linked List:");
-        list.display();
-
-        list.delete(30);
-        System.out.println("setelah menghapus 30:");
-        list.display();
-
-        Node node = new Node(10);
-        System.out.println(node); // output might look like: Node@1a2b3c4
     }
 }
