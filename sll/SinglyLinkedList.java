@@ -1,11 +1,10 @@
-package singly_linked_list;
 /**
  * SinglyLinkedList.java
  * tugas zahra a. s.
  */
-
+package sll;
 public class SinglyLinkedList {
-    private Node head;
+    public Node head;
 
     // menambahkan node di akhir linked list
     public void add(int data) {

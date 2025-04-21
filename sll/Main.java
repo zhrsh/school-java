@@ -1,8 +1,8 @@
-package singly_linked_list;
 /**
  * Main.java
  * tugas zahra a. s.
  */
+package sll;
 public class Main {
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();

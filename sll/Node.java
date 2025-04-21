@@ -1,8 +1,8 @@
-package singly_linked_list;
 /**
  * Node.java
  * tugas zahra a. s.
  */
+package sll;
 public class Node {
     int data;
     Node next;
