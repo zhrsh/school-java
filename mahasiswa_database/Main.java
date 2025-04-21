@@ -16,7 +16,7 @@ public class Main {
             System.out.println("[1] push data mahasiswa");
             System.out.println("[2] tampilkan semua data mahasiswa");
             System.out.println("[3] pop semua data mahasiswa");
-            System.out.println("[any key] keluar");
+            System.out.println("[any other key] keluar");
             System.out.print("\npilih langkah: ");
             String input = scanner.nextLine(); // read the entire line
 

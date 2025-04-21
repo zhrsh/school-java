@@ -1,4 +1,9 @@
 /**
+ * LinkedList.java - program database mahasiswa
+ * tugas zahra a. s.
+ */
+
+/**
  * Kelas LinkedList merepresentasikan struktur data linked list untuk menyimpan data mahasiswa.
  */
 public class LinkedList {

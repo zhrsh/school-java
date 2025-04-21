@@ -1,4 +1,9 @@
 /**
+ * Mahaiswa.java - program database mahasiswa
+ * tugas zahra a. s.
+ */
+
+/**
  * Kelas Mahasiswa merepresentasikan data mahasiswa dengan atribut NIM, nama, jurusan,
  * dan referensi ke mahasiswa berikutnya dalam linked list. (Node linked list)
  */
