@@ -1,8 +1,8 @@
 /**
- * Tugas DSAA LAB Zahra A.S. (REMOVED)
  * ArrayListOperations.java
+ * tugas zahra a. s.
  */
-
+package com.zhrsh.arraycomp;
 import java.util.ArrayList;
 import java.util.Collections;
 
