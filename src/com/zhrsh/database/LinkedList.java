@@ -2,7 +2,7 @@
  * LinkedList.java - program database mahasiswa
  * tugas zahra a. s.
  */
-package database;
+package com.zhrsh.database;
 /**
  * Kelas LinkedList merepresentasikan struktur data linked list untuk menyimpan data mahasiswa.
  */

@@ -2,7 +2,7 @@
  * Main.java - program database mahasiswa
  * tugas zahra a. s.
  */
-package database;
+package com.zhrsh.database;
 
 import java.util.Scanner;
 

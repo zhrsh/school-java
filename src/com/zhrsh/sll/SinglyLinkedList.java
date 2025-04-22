@@ -2,7 +2,7 @@
  * SinglyLinkedList.java
  * tugas zahra a. s.
  */
-package sll;
+package com.zhrsh.sll;
 public class SinglyLinkedList {
     public Node head;
 

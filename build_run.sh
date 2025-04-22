@@ -4,6 +4,6 @@ cd src
 
 for package in "${packages[@]}"; do
     echo "COMPILING AND RUNNING '"$package"' PACKAGE..."
-    javac "$package"/Main.java
-    java "$package".Main
+    javac com/zhrsh/"$package"/Main.java
+    java com.zhrsh."$package".Main
 done
