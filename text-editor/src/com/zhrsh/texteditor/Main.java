@@ -11,6 +11,7 @@ public class Main {
         editor.printMsg("tuliskan teks yang inging ditambahkan dan enter newline untuk simpan, command (/undo, /redo, /exit):");
 
         while (true) {
+            System.out.print(editor.getCurrentText());
             command = scanner.nextLine();
 
             if (command.equalsIgnoreCase("/exit")) {
@@ -22,7 +23,7 @@ public class Main {
             } else if (!command.trim().isEmpty()) { // check jika input tdk kosong
                 editor.addText(command); // tambah teks secara langsung
             } else {
-                editor.printMsg("perintah tidak dikenali. gunakan teks untuk ditambahkan, '/undo', '/redo', atau '/exit'.");
+                editor.printMsg("input kosong.");
             }
         }
 

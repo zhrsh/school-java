@@ -49,4 +49,8 @@ public class TextEditor {
             printMsg("nothing to redo.");
         }
     }
+
+    public String getCurrentText() {
+        return this.currentText;
+    }
 }
