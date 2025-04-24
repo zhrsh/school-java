@@ -19,8 +19,8 @@ public class Main {
                 editor.undo();
             } else if (command.equalsIgnoreCase("/redo")) {
                 editor.redo();
-            } else if (!command.trim().isEmpty()) { // Check if the input is not empty
-                editor.addText(command); // Add the text directly
+            } else if (!command.trim().isEmpty()) { // check jika input tdk kosong
+                editor.addText(command); // tambah teks secara langsung
             } else {
                 System.out.println("perintah tidak dikenali. gunakan teks untuk ditambahkan, '/undo', '/redo', atau '/exit'.");
             }
