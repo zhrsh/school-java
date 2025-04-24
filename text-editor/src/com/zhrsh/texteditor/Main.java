@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String command;
 
-        Color.printYellow("tuliskan teks yang inging ditambahkan dan enter newline untuk simpan, command (/undo, /redo, /exit):");
+        Color.printYellowln("tuliskan teks yang inging ditambahkan dan enter newline untuk simpan, command (/undo, /redo, /exit):");
 
         while (true) {
             Color.printGrey(editor.getCurrentText());
@@ -23,7 +23,7 @@ public class Main {
             } else if (!command.trim().isEmpty()) { // check jika input tdk kosong
                 editor.addText(command); // tambah teks secara langsung
             } else {
-                Color.printRed("input kosong.");
+                Color.printRedln("input kosong.");
             }
         }
 

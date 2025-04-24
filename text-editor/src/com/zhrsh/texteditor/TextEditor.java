@@ -19,7 +19,7 @@ public class TextEditor {
         // kosongkan redo stack karena kita telah melakukan perubahan baru
         redoStack.clear();
         currentText += newText;
-        Color.printYellow("teks saat ini: \"" + currentText + "\"");
+        Color.printYellowln("teks saat ini: \"" + currentText + "\"");
     }
 
     public void undo() {
@@ -28,9 +28,9 @@ public class TextEditor {
             redoStack.push(currentText);
             // kembalikan ke kondisi sebelumnya
             currentText = undoStack.pop();
-            Color.printYellow("undo: \"" + currentText + "\"");
+            Color.printYellowln("undo: \"" + currentText + "\"");
         } else {
-            Color.printRed("nothing to undo.");
+            Color.printRedln("nothing to undo.");
         }
     }
 
@@ -40,9 +40,9 @@ public class TextEditor {
             undoStack.push(currentText);
             // kembalikan ke kondisi yang telah di-undo
             currentText = redoStack.pop();
-            Color.printYellow("redo: \"" + currentText + "\"");
+            Color.printYellowln("redo: \"" + currentText + "\"");
         } else {
-            Color.printRed("nothing to redo.");
+            Color.printRedln("nothing to redo.");
         }
     }
 
