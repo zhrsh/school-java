@@ -19,7 +19,7 @@ public class Main {
                 Color.printYellow("apakah anda ingin save text sebagai file? (y/n): ");
                 exit = scanner.nextLine();
                     if (exit.equalsIgnoreCase("y")) {
-                        Color.printYellow("masukkan nama file yang akan di save: ");
+                        Color.printYellow("masukkan nama file yang akan di save (.txt): ");
                         String filename = scanner.nextLine();
                         FileIO.saveToFile(editor.getCurrentText(), filename);
                     }
