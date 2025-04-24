@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String command;
 
-        Color.printRed("tuliskan teks yang inging ditambahkan dan enter newline untuk simpan, command (/undo, /redo, /exit):");
+        Color.printYellow("tuliskan teks yang inging ditambahkan dan enter newline untuk simpan, command (/undo, /redo, /exit):");
 
         while (true) {
             Color.printGrey(editor.getCurrentText());
