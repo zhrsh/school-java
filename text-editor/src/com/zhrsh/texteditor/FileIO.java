@@ -1,3 +1,5 @@
+/* Copyright (c) 2025 Zahra A. S. */
+
 package com.zhrsh.texteditor;
 
 import java.nio.file.Files;
