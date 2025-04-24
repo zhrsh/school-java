@@ -8,22 +8,21 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String command;
 
-        System.out.println("masukkan perintah (add, undo, redo, exit):");
+        System.out.println("tuliskan teks yang inging ditambahkan dan enter newline untuk simpan, command (/undo, /redo, /exit):");
 
         while (true) {
             command = scanner.nextLine();
 
-            if (command.equalsIgnoreCase("exit")) {
+            if (command.equalsIgnoreCase("/exit")) {
                 break;
-            } else if (command.startsWith("add ")) {
-                String textToAdd = command.substring(4); // Mengambil teks setelah "add "
-                editor.addText(textToAdd);
-            } else if (command.equalsIgnoreCase("undo")) {
+            } else if (command.equalsIgnoreCase("/undo")) {
                 editor.undo();
-            } else if (command.equalsIgnoreCase("redo")) {
+            } else if (command.equalsIgnoreCase("/redo")) {
                 editor.redo();
+            } else if (!command.trim().isEmpty()) { // Check if the input is not empty
+                editor.addText(command); // Add the text directly
             } else {
-                System.out.println("perintah tidak dikenali. Gunakan 'add <teks>', 'undo', 'redo', atau 'exit'.");
+                System.out.println("perintah tidak dikenali. gunakan teks untuk ditambahkan, '/undo', '/redo', atau '/exit'.");
             }
         }
 
