@@ -2,7 +2,15 @@ package com.zhrsh.texteditor;
 
 import java.util.Scanner;
 
+/**
+ * Kelas Main adalah titik masuk utk program texteditor. Kelas ini mengelola interaksi pengguna
+ * dan mengontrol alur program.
+ */
 public class Main {
+    /**
+     * Metode utama yang menjalankan program texteditor. Mengelola input pengguna utk menambahkan teks,
+     * melakukan undo, redo, dan menyimpan teks ke dalam file.
+     */
     public static void main(String[] args) {
         TextEditor editor = new TextEditor();
         Scanner scanner = new Scanner(System.in);
@@ -18,11 +26,11 @@ public class Main {
             if (command.equalsIgnoreCase("/exit")) {
                 Color.printYellow("apakah anda ingin save text sebagai file? (y/n): ");
                 exit = scanner.nextLine();
-                    if (exit.equalsIgnoreCase("y")) {
-                        Color.printYellow("masukkan nama file yang akan di save (.txt): ");
-                        String filename = scanner.nextLine();
-                        FileIO.saveToFile(editor.getCurrentText(), filename);
-                    }
+                if (exit.equalsIgnoreCase("y")) {
+                    Color.printYellow("masukkan nama file yang akan di save (.txt): ");
+                    String filename = scanner.nextLine();
+                    FileIO.saveToFile(editor.getCurrentText(), filename);
+                }
                 break;
             } else if (command.equalsIgnoreCase("/undo")) {
                 editor.undo();
