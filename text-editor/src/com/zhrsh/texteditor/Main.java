@@ -7,6 +7,7 @@ public class Main {
         TextEditor editor = new TextEditor();
         Scanner scanner = new Scanner(System.in);
         String command;
+        String exit; // yes or no ketika user exit
 
         Color.printYellowln("tuliskan teks yang inging ditambahkan dan enter newline untuk simpan, command (/undo, /redo, /exit):");
 
@@ -15,6 +16,13 @@ public class Main {
             command = scanner.nextLine();
 
             if (command.equalsIgnoreCase("/exit")) {
+                Color.printYellow("apakah anda ingin save text sebagai file? (y/n): ");
+                exit = scanner.nextLine();
+                    if (exit.equalsIgnoreCase("y")) {
+                        Color.printYellow("masukkan nama file yang akan di save: ");
+                        String filename = scanner.nextLine();
+                        FileIO.saveToFile(editor.getCurrentText(), filename);
+                    }
                 break;
             } else if (command.equalsIgnoreCase("/undo")) {
                 editor.undo();
