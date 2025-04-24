@@ -13,17 +13,13 @@ public class TextEditor {
         this.redoStack = new Stack<>();
     }
 
-    public void printMsg(String message) {
-        System.out.println("\033[31m" + message + "\033[0m");
-    }
-
     public void addText(String newText) {
         // simpan kondisi saat ini ke dalam undo stack sebelum menambahkan teks baru
         undoStack.push(currentText);
         // kosongkan redo stack karena kita telah melakukan perubahan baru
         redoStack.clear();
         currentText += newText;
-        printMsg("teks saat ini: \"" + currentText + "\"");
+        Color.printRed("teks saat ini: \"" + currentText + "\"");
     }
 
     public void undo() {
@@ -32,9 +28,9 @@ public class TextEditor {
             redoStack.push(currentText);
             // kembalikan ke kondisi sebelumnya
             currentText = undoStack.pop();
-            printMsg("undo: \"" + currentText + "\"");
+            Color.printRed("undo: \"" + currentText + "\"");
         } else {
-            printMsg("nothing to undo.");
+            Color.printRed("nothing to undo.");
         }
     }
 
@@ -44,9 +40,9 @@ public class TextEditor {
             undoStack.push(currentText);
             // kembalikan ke kondisi yang telah di-undo
             currentText = redoStack.pop();
-            printMsg("redo: \"" + currentText + "\"");
+            Color.printRed("redo: \"" + currentText + "\"");
         } else {
-            printMsg("nothing to redo.");
+            Color.printRed("nothing to redo.");
         }
     }
 
