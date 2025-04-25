@@ -6,6 +6,7 @@ package com.zhrsh.sistemperpus;
  * berisi common methods dan attributes utk semua tipe pengguna.
  * attribut menggunakan access modifier 'protected' agar hanya 
  * bisa diakses oleh subclass.
+ * @author Zahra A. S.
  */
 public class User {
     protected String username;

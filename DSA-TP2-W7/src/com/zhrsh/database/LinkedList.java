@@ -5,6 +5,7 @@
 package com.zhrsh.database;
 /**
  * Kelas LinkedList merepresentasikan struktur data linked list untuk menyimpan data mahasiswa.
+ * @author Zahra A. S.
  */
 public class LinkedList {
     private Mahasiswa head;

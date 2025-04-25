@@ -5,6 +5,9 @@
 package com.zhrsh.arraycomp;
 import java.util.Random;
 
+/**
+ * @author Zahra A. S.
+ */
 public class Comparison {
     /**
      * Metode main/utama

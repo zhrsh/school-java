@@ -7,6 +7,7 @@ import java.util.Arrays;
 
 /**
  * Class ini menyediakan operasi dasar untuk Array yang menyimpan nilai integer.
+ * @author Zahra A. S.
  */
 public class ArrayOperations {
     private int[] array;

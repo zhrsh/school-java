@@ -9,6 +9,7 @@ package com.zhrsh.sistemperpus;
  * 
  * class ini berfungsi sebagai titik masuk (entry point) utk aplikasi, 
  * di mana object Admin dan Member dibuat dan interaksi dengan sistem perpustakaan dilakukan.
+ * @author Zahra A. S.
  */
 public class SistemPerpus {
     public static void main(String[] args) {

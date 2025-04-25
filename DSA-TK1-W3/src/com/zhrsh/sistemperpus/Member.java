@@ -5,6 +5,7 @@ package com.zhrsh.sistemperpus;
  * 
  * class ini mewarisi atribut dan method dari parent class User.
  * class ini mewakil pengguna biasa (member).
+ * @author Zahra A. S.
  */
 public class Member extends User {
     /**

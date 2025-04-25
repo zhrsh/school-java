@@ -8,6 +8,7 @@ import java.util.Collections;
 
 /**
  * Class ini menyediakan operasi dasar untuk ArrayList yang menyimpan nilai integer.
+ * @author Zahra A. S.
  */
 public class ArrayListOperations {
     private ArrayList<Integer> arrayList;

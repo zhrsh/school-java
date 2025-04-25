@@ -6,6 +6,9 @@ package com.zhrsh.database;
 
 import java.util.Scanner;
 
+/**
+ * @author Zahra A. S.
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

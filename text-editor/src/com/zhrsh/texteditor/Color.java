@@ -5,6 +5,7 @@ package com.zhrsh.texteditor;
 /**
  * Kelas Color menyediakan metode untuk print pesan ke konsol dengan warna yang berbeda.
  * Kelas ini menggunakan kode ANSI untuk mengubah warna teks yang print.
+ * @author Zahra A. S.
  */
 public class Color {
     /**

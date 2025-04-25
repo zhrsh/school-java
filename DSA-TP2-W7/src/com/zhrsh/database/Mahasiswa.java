@@ -6,6 +6,7 @@ package com.zhrsh.database;
 /**
  * Kelas Mahasiswa merepresentasikan data mahasiswa dengan atribut NIM, nama, jurusan,
  * dan referensi ke mahasiswa berikutnya dalam linked list. (Node linked list)
+ * @author Zahra A. S.
  */
 public class Mahasiswa {
     String nim;

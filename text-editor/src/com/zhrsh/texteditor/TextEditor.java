@@ -8,6 +8,7 @@ import java.util.Stack;
  * Kelas TextEditor menyediakan fungsionalitas utk mengedit teks dengan kemampuan
  * utk menambahkan teks, melakukan undo, dan redo. Kelas ini menggunakan dua stack
  * utk menyimpan kondisi teks sebelumnya dan yang telah di-undo.
+ * @author Zahra A. S.
  */
 public class TextEditor {
     private String currentText;

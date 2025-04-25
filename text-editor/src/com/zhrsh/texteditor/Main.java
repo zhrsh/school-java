@@ -7,6 +7,7 @@ import java.util.Scanner;
 /**
  * Kelas Main adalah titik masuk utk program texteditor. Kelas ini mengelola interaksi pengguna
  * dan mengontrol alur program.
+ * @author Zahra A. S.
  */
 public class Main {
     /**

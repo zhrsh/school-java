@@ -9,6 +9,7 @@ import java.io.IOException;
 
 /**
  * Kelas FileIO menyediakan fungsionalitas untuk menyimpan konten ke dalam file.
+ * @author Zahra A. S.
  */
 public class FileIO {
     /**

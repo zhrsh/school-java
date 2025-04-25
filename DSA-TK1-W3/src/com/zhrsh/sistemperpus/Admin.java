@@ -5,6 +5,7 @@ package com.zhrsh.sistemperpus;
  * 
  * class ini mewarisi atribut dan method dari parent class User.
  * class ini mewakili pengguna dengan hak akses admin.
+ * @author Zahra A. S.
  */
 public class Admin extends User {
     /**
