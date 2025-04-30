@@ -20,7 +20,7 @@ public class Main {
         String command;
         String exit; // yes or no ketika user exit
 
-        Color.printYellowln("tuliskan teks yang inging ditambahkan dan enter newline untuk simpan, command (/undo, /redo, /exit):");
+        helpMsg();
 
         while (true) {
             Color.printGrey(editor.getCurrentText());
@@ -39,6 +39,8 @@ public class Main {
                 editor.undo();
             } else if (command.equalsIgnoreCase("/redo")) {
                 editor.redo();
+            } else if (command.equalsIgnoreCase("/help")) {
+                helpMsg();
             } else if (!command.trim().isEmpty()) { // check jika input tdk kosong
                 editor.addText(command); // tambah teks secara langsung
             } else {
@@ -47,5 +49,16 @@ public class Main {
         }
 
         scanner.close();
+    }
+
+    public static void helpMsg() {
+        Color.printYellowln("SIMPLE TEXT EDITOR\nwrite the text and press enter to add to the stack.\n");
+        Color.printYellowln("available commands:");
+        Color.printYellowln("1. '/undo' - reverts the last action you performed in the editor.");
+        Color.printYellowln("2. '/redo' - reapplies the last action that was undone.");
+        Color.printYellowln("3. '/help' - show this message.");
+        Color.printYellowln("4. '/exit' - exit program and optionally save.");
+        Color.printYellowln("5. [Text] - add the specified text directly to the editor.");
+        Color.printYellowln("   (replace [Text] with your desired input then press enter.)");
     }
 }
