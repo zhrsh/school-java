@@ -6,57 +6,58 @@ public class Main {
     public static void main(String[] args) {
         QueueManager queueManager = new QueueManager();
         Scanner scanner = new Scanner(System.in);
+        String command;
+
+        System.out.println("\nPROGRAM QUEUE SEDERHANA");
+        helpMsg();
         
         while (true) {
-            System.out.println("\n== PROGRAM QUEUE SEDERHANA ==");
-            System.out.println("[1] tambah item ke belakang queue");
-            System.out.println("[2] hapus item dari depan queue");
-            System.out.println("[3] hitung jumlah item dalam queue");
-            System.out.println("[4] tampilkan queue");
-            System.out.println("[5] peek item di depan queue");
-            System.out.println("[any other key] exit");
-            System.out.print("\npilih opsi: ");
+            System.out.print("\ncommand: ");
+            command = scanner.nextLine();
 
-            String input = scanner.nextLine(); // read the entire line
-
-            if (!input.isEmpty()) {
-                char choice = input.charAt(0); // get the first character
-                switch (choice) {
-                    case '1':
-                    System.out.print("masukkan item untuk ditambahkan: ");
-                    String item = scanner.nextLine();
-                    queueManager.enqueue(item);
-                    System.out.println("item '" + item + "' telah ditambahkan ke queue.");
-                    break;
-                case '2':
-                    String removedItem = queueManager.dequeue();
-                    if (removedItem != null) {
-                        System.out.println("item '" + removedItem + "' telah dihapus dari queue.");
-                    } else {
-                        System.out.println("queue kosong, tidak ada item yang dihapus.");
-                    }
-                    break;
-                case '3':
-                    int count = queueManager.countItems();
-                    System.out.println("jumlah item dalam queue: " + count);
-                    break;
-                case '4':
-                    System.out.println("isi queue: " + queueManager.displayQueue());
-                    break;
-                case '5':
-                    System.out.println("element di depan queue: " + queueManager.peekQueue());
-                    break;
-                default:
-                    System.out.println("\nexiting program...");
-                    scanner.close();
-                    return;
+            if (command.startsWith("/add ")) {
+                String item = commandWithArg(command, "/add ");
+                queueManager.enqueue(item);
+                System.out.println("item '" + item + "' telah ditambahkan ke queue.");
+            } else if (command.equalsIgnoreCase("/del")) {
+                String removedItem = queueManager.dequeue();
+                if (removedItem != null) {
+                    System.out.println("item '" + removedItem + "' telah dihapus dari queue.");
+                } else {
+                    System.out.println("queue kosong, tidak ada item yang dihapus.");
                 }
-            } 
-            
-            else {
-                System.out.println("no input provided.");
+            } else if (command.equalsIgnoreCase("/count")) {
+                int count = queueManager.countItems();
+                System.out.println("jumlah item dalam queue: " + count);
+            } else if (command.equalsIgnoreCase("/view")) {
+                System.out.println("isi queue: " + queueManager.displayQueue());
+            } else if (command.equalsIgnoreCase("/peek")) {
+                System.out.println("element di depan queue: " + queueManager.peekQueue());
+            } else if (command.equalsIgnoreCase("/help")) {
+                helpMsg();
+            } else if (command.equalsIgnoreCase("/exit")) {
+                System.out.println("\nexiting program...");
+                scanner.close();
+                break;
+            } else {
+                System.out.println("input tidak sesuai.");
             }
-
         }
+    }
+
+    public static void helpMsg() {
+        System.out.println("\ncommand yang bisa digunakan:");
+        System.out.println("1. '/add <ITEM>' untuk tambah item ke belakang queue.");
+        System.out.println("2. '/del <ITEM>' untuk hapus item dari depan queue.");
+        System.out.println("3. '/count' untuk hitung jumlah item dalam queue.");
+        System.out.println("4. '/view' untuk tampilkan queue.");
+        System.out.println("5. '/peek' untuk peek item di depan queue.");
+        System.out.println("6. '/help' untuk menampilkan message ini.");
+        System.out.println("7. '/exit' untuk exit.");
+    }
+    
+    public static String commandWithArg(String input, String command) {
+        String arg = input.substring(command.length()).trim(); // remove the command part
+        return arg;
     }
 }

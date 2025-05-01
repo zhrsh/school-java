@@ -17,7 +17,7 @@ public class QueueManager {
 
     // menghapus item dari queue
     public String dequeue() {
-        return queue.remove();
+        return queue.poll(); // poll() agar tidak exception jika queue kosong
     }
 
     // menghitung jumlah item dalam queue
@@ -27,7 +27,11 @@ public class QueueManager {
 
     // menampilkan item terdepan
     public String peekQueue() {
-        return queue.peek();
+        if (!queue.isEmpty()) {
+            return queue.peek();
+        } else {
+            return "queue kosong.";
+        }
     }
 
     // menampilkan isi queue
@@ -36,7 +40,7 @@ public class QueueManager {
         if (!queue.isEmpty()) {
             return queue.toString();
         } else {
-            return "queue is empty.";
+            return "queue kosong.";
         }
     }
 }
