@@ -34,6 +34,7 @@ public class Main {
                     String filename = scanner.nextLine();
                     FileIO.saveToFile(editor.getCurrentText(), filename);
                 }
+                scanner.close();
                 break;
             } else if (command.equalsIgnoreCase("/undo")) {
                 editor.undo();
