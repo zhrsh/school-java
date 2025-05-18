@@ -17,9 +17,16 @@ public class HashTable {
         return Math.abs(nim.hashCode()) % size;
     }
 
-    public void add(Mahasiswa mahasiswa) {
+    public boolean add(Mahasiswa mahasiswa) {
         int index = hash(mahasiswa.getNim());
+        for (Mahasiswa m : table[index]) {
+            if (m.getNim().equals(mahasiswa.getNim())) {
+                System.out.println("gagal. mahasiswa dengan NIM " + mahasiswa.getNim() + " sudah ada.");
+                return false; // prevent adding duplicates
+            }
+        }
         table[index].add(mahasiswa);
+        return true;
     }
 
     public Mahasiswa search(String nim) {
