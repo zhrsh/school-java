@@ -1,3 +1,4 @@
+package hashtable;
 import java.util.LinkedList;
 
 /**

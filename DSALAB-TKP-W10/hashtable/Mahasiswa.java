@@ -1,3 +1,4 @@
+package hashtable;
 /**
  * kelas Mahasiswa merepresentasikan data mahasiswa dengan atribut NIM dan nama.
  * berisi metode getter.
