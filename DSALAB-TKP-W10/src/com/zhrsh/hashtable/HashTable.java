@@ -1,4 +1,4 @@
-package hashtable;
+package com.zhrsh.hashtable;
 import java.util.LinkedList;
 
 /**

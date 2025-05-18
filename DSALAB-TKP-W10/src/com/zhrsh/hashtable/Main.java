@@ -1,4 +1,4 @@
-package hashtable;
+package com.zhrsh.hashtable;
 import java.util.Scanner;
 
 /**
@@ -11,11 +11,11 @@ public class Main {
         HashTable hashTable = new HashTable(10);
 
         // menambahkan data mahasiswa default
-        hashTable.add(new Mahasiswa("101", "Andi"));
-        hashTable.add(new Mahasiswa("102", "Natalie"));
-        hashTable.add(new Mahasiswa("103", "Aulia"));
-        hashTable.add(new Mahasiswa("104", "Budi"));
-        hashTable.add(new Mahasiswa("105", "Lizzie"));
+        hashTable.add(new Mahasiswa("101", "Andi", 3.5));
+        hashTable.add(new Mahasiswa("102", "Natalie", 4.0));
+        hashTable.add(new Mahasiswa("103", "Aulia", 3.2));
+        hashTable.add(new Mahasiswa("104", "Budi", 3.0));
+        hashTable.add(new Mahasiswa("105", "Lizzie", 3.9));
 
         while (true) {
             System.out.println("\n=== DATABASE MAHASISWA ===");
@@ -35,7 +35,9 @@ public class Main {
                         String nim = scanner.nextLine();
                         System.out.print("masukkan nama: ");
                         String nama = scanner.nextLine();
-                        boolean success = hashTable.add(new Mahasiswa(nim, nama));
+                        System.out.print("masukkan IPK: ");
+                        double ipk = Double.parseDouble(scanner.nextLine());
+                        boolean success = hashTable.add(new Mahasiswa(nim, nama, ipk));
                         if (success == true) {
                             System.out.println("data mahasiswa telah ditambahkan.");
                         }
