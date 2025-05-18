@@ -1,3 +1,7 @@
+/**
+ * kelas Mahasiswa merepresentasikan data mahasiswa dengan atribut NIM dan nama.
+ * berisi metode getter.
+ */
 public class Mahasiswa {
     private String nim;
     private String nama;

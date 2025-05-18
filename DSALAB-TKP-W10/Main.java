@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/**
+ * kelas Main adalah titik masuk program yang menyediakan interface pengguna untuk
+ * menambahkan, mencari, dan menghapus data mahasiswa dari HashTable.
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
