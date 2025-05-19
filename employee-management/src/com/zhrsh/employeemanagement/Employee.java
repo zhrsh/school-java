@@ -13,6 +13,11 @@ public class Employee {
         return 0.0;
     }
 
+    // method getter tipe pegawai, akan di-override dgn child class
+    public String getType() {
+        return "pegawai";
+    }
+
     public String getName() {
         return name;
     }

@@ -11,8 +11,16 @@ public class PartTimeEmployee extends Employee {
         this.hoursWorked = hoursWorked;
     }
 
+    // POLYMORPHISM
     @Override
     public double calculateSalary() {
         return hourlyRate * hoursWorked;
+    }
+
+    // POLYMORPHISM
+    // method getter tipe pegawai, akan di-override dgn child class
+    @Override
+    public String getType() {
+        return "pegawai paruh waktu";
     }
 }
