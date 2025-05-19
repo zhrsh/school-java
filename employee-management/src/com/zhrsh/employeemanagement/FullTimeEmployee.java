@@ -6,6 +6,9 @@ public class FullTimeEmployee extends Employee {
 
     public FullTimeEmployee(String name, double monthlySalary) {
         super(name);
+        if (monthlySalary < 0) {
+            throw new IllegalArgumentException("salary tidak bisa negative");
+        }
         this.monthlySalary = monthlySalary;
     }
 
