@@ -2,22 +2,22 @@ package com.zhrsh.employeemanagement;
 
 // subclass / child class untuk Pegawai Paruh Waktu
 public class PartTimeEmployee extends Employee {
-    private double hourlyRate;
+    private double hourlySalary;
     private int hoursWorked;
 
-    public PartTimeEmployee(String name, double hourlyRate, int hoursWorked) {
+    public PartTimeEmployee(String name, double hourlySalary, int hoursWorked) {
         super(name);
-        if (hourlyRate < 0 || hoursWorked < 0) {
+        if (hourlySalary < 0 || hoursWorked < 0) {
             throw new IllegalArgumentException("hourly rate dan hours worked tidak bisa negative");
         }
-        this.hourlyRate = hourlyRate;
+        this.hourlySalary = hourlySalary;
         this.hoursWorked = hoursWorked;
     }
 
     // POLYMORPHISM
     @Override
     public double calculateSalary() {
-        return hourlyRate * hoursWorked;
+        return hourlySalary * hoursWorked;
     }
 
     // POLYMORPHISM
