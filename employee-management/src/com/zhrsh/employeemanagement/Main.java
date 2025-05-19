@@ -4,11 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// main class untuk menjalankan program
+/**
+ * kelas Main adalah kelas utama untuk menjalankan program.
+ * kelas ini mengelola data pegawai dan interface pengguna.
+ * @author Zahra A. S.
+ */
 public class Main {
     private static List<FullTimeEmployee> fullTimeEmployees = new ArrayList<>();
     private static List<PartTimeEmployee> partTimeEmployees = new ArrayList<>();
 
+    // main method untuk menjalankan program
     public static void main(String[] args) {
         // data default sesuai contoh
         // new instance kelas (objek) pegawai tetap, terus masukkan kedalam ArrayList fullTimeEmployees
@@ -83,5 +88,4 @@ public class Main {
             System.out.println(employee.toString());
         }
     }
-
 }

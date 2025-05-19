@@ -1,9 +1,14 @@
 package com.zhrsh.employeemanagement;
 
-// subclass / child class untuk Pegawai Tetap
+/**
+ * kelas FullTimeEmployee adalah subclass dari Employee yang 
+ * merepresentasikan pegawai tetap.
+ * @author Zahra A. S.
+ */
 public class FullTimeEmployee extends Employee {
     private double monthlySalary;
 
+    // constructor (dengan pengecekan argument)
     public FullTimeEmployee(String name, double monthlySalary) {
         super(name);
         if (monthlySalary < 0) {

@@ -1,9 +1,15 @@
 package com.zhrsh.employeemanagement;
 
-// superclass / parent class
+/**
+ * kelas Employee adalah kelas dasar (superclass) untuk semua jenis pegawai.
+ * kelas ini menyimpan informasi dasar pegawai seperti nama dan 
+ * menyediakan metode untuk menghitung gaji dan mendapatkan tipe pegawai.
+ * @author Zahra A. S.
+ */
 public class Employee {
     protected String name;
 
+    // constructor
     public Employee(String name) {
         this.name = name;
     }
@@ -22,6 +28,7 @@ public class Employee {
         return name;
     }
 
+    // POLYMORPHISM (implementasi khusus .toString() dalam objek java)
     @Override
     public String toString() {
         return "gaji " + getType() + " " + name + ": Rp" + calculateSalary();
