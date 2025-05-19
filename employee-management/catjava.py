@@ -15,15 +15,17 @@ def main():
         "src/com/zhrsh/employeemanagement/"
     )
 
-def concatenate_java_files(input_files, output_file, dir):
+def concatenate_java_files(input_files, output_file, directory):
     imports = set()
     content = []
 
     for file in input_files:
-        with open(f"{dir}{file}", 'r', encoding="utf-8") as f:
+        with open(f"{directory}{file}", 'r', encoding="utf-8") as f:
             for line in f:
                 # remove package declarations
                 if line.startswith("package "):
+                    continue
+                if line.startswith(" * @author "):
                     continue
                 # collect import statements
                 if line.startswith("import "):
