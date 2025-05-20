@@ -8,7 +8,7 @@ public class SinglyLinkedList {
     Node head;
 
     /**
-     * menambahkan node baru ke akhir linked list.
+     * menambahkan node baru dengan data yang diberikan di akhir linked list.
      *
      * @param data nilai yang akan disimpan dalam node baru.
      */
@@ -26,7 +26,8 @@ public class SinglyLinkedList {
     }
 
     /**
-     * menampilkan isi dari linked list.
+     * menampilkan semua elemen dalam linked list.
+     * elemen akan ditampilkan dalam format: data1 -> data2 -> ... -> null
      */
     public void display() {
         Node current = head;

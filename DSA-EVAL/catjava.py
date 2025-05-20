@@ -6,13 +6,14 @@ def main():
     # list of Java files to concatenate
     java_files = [
         # ls *.java | sed 's/.*/"&"/' | tr '\n' ', ' | sed 's/, $//'
-        "Employee.java","FullTimeEmployee.java","PartTimeEmployee.java","Main.java"
+        #"Employee.java","FullTimeEmployee.java","PartTimeEmployee.java","Main.java"
+        "Node.java","SinglyLinkedList.java","Main.java"
     ]
 
     concatenate_java_files(
         java_files,
-        "Combined.md",
-        "src/com/zhrsh/employeemanagement/"
+        "CombinedSSL.md",
+        "src/io/github/zhrsh/sll/"
     )
 
 def concatenate_java_files(input_files, output_file, directory):
