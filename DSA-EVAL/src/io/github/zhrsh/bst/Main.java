@@ -3,6 +3,11 @@ package io.github.zhrsh.bst;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * kelas Main adalah titik masuk untuk program yang mengimplementasikan
+ * pohon pencarian biner atau BST (Binary Search Tree).
+ * @author Zahra A. S.
+ */
 public class Main {
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
@@ -23,10 +28,11 @@ public class Main {
         try {
             int intToSearch = scanner.nextInt();
             System.out.println("jumlah node " + intToSearch + ": " + bst.search(intToSearch));
-        // error handling
         } catch (InputMismatchException e) {
+            // error handling
             System.out.println("input tidak valid.");
         }
+
         scanner.close();
     }
 }
