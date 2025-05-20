@@ -1,5 +1,9 @@
 package io.github.zhrsh.sll;
 
+/**
+ * kelas Main untuk titik masuk program dan menguji fungsi dari SinglyLinkedList.
+ * @author Zahra A. S.
+ */
 public class Main {
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();

@@ -1,9 +1,17 @@
 package io.github.zhrsh.sll;
 
+/**
+ * kelas SinglyLinkedList merepresentasikan linked list sederhana.
+ * @author Zahra A. S.
+ */
 public class SinglyLinkedList {
     Node head;
 
-    // method untuk menambahkan node ke linked list
+    /**
+     * menambahkan node baru ke akhir linked list.
+     *
+     * @param data nilai yang akan disimpan dalam node baru.
+     */
     public void insert(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -17,7 +25,9 @@ public class SinglyLinkedList {
         }
     }
 
-    // menampilkan isi linked list
+    /**
+     * menampilkan isi dari linked list.
+     */
     public void display() {
         Node current = head;
         while (current != null) {
@@ -27,7 +37,12 @@ public class SinglyLinkedList {
         System.out.println("null\n");
     }
 
-    // method untuk menyisipkan angka setelah angka tertentu
+    /**
+     * menyisipkan node baru setelah node dengan nilai tertentu.
+     *
+     * @param target nilai node setelahnya node baru akan disisipkan.
+     * @param data nilai yang akan disimpan dalam node baru.
+     */
     public void insertAfter(int target, int data) {
         Node current = head;
         while (current != null && current.data != target) {
@@ -42,7 +57,11 @@ public class SinglyLinkedList {
         }
     }
 
-    // method untuk menghapus angka tertentu
+    /**
+     * menghapus node dengan nilai tertentu dari linked list.
+     *
+     * @param data nilai node yang akan dihapus.
+     */
     public void delete(int data) {
         if (head == null) return;
 
