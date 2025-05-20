@@ -1,5 +1,6 @@
 package io.github.zhrsh.bst;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -19,8 +20,13 @@ public class Main {
         // search
         System.out.print("\nsearch jumlah sebuah node dalam BST: ");
         Scanner scanner = new Scanner(System.in);
-        int intToSearch = scanner.nextInt();
-        System.out.println("jumlah node " + intToSearch + ": " + bst.search(intToSearch));
+        try {
+            int intToSearch = scanner.nextInt();
+            System.out.println("jumlah node " + intToSearch + ": " + bst.search(intToSearch));
+        // error handling
+        } catch (InputMismatchException e) {
+            System.out.println("input tidak valid.");
+        }
         scanner.close();
     }
 }
