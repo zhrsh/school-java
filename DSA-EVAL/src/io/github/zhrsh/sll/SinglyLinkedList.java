@@ -1,6 +1,6 @@
 package io.github.zhrsh.sll;
 
-class SinglyLinkedList {
+public class SinglyLinkedList {
     Node head;
 
     // method untuk menambahkan node ke linked list
@@ -17,14 +17,14 @@ class SinglyLinkedList {
         }
     }
 
-    // method untuk menampilkan linked list
+    // menampilkan isi linked list
     public void display() {
         Node current = head;
         while (current != null) {
-            System.out.print(current.data + " ");
+            System.out.print(current.data + " -> ");
             current = current.next;
         }
-        System.out.println();
+        System.out.println("null\n");
     }
 
     // method untuk menyisipkan angka setelah angka tertentu

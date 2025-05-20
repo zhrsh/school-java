@@ -9,17 +9,17 @@ public class Main {
         for (int number : numbers) {
             list.insert(number);
         }
-        System.out.println("linked List setelah insert:");
+        System.out.println("\na. linked list setelah insert:");
         list.display();
 
         // b. lakukan proses insert angka 32 setelah angka 30
         list.insertAfter(30, 32);
-        System.out.println("linked List setelah insert 32 setelah 30:");
+        System.out.println("b. linked list setelah insert 32 setelah 30:");
         list.display();
 
         // c. lakukan proses delete angka 42
         list.delete(42);
-        System.out.println("linked List setelah delete angka 42:");
+        System.out.println("c. linked list setelah delete angka 42:");
         list.display();
     }
 }
