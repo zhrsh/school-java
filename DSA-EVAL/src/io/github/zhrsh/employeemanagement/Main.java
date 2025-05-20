@@ -1,4 +1,4 @@
-package com.zhrsh.employeemanagement;
+package io.github.zhrsh.employeemanagement;
 
 import java.util.ArrayList;
 import java.util.List;

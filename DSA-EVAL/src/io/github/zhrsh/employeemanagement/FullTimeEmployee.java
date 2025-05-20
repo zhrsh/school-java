@@ -1,4 +1,4 @@
-package com.zhrsh.employeemanagement;
+package io.github.zhrsh.employeemanagement;
 
 /**
  * kelas FullTimeEmployee adalah subclass dari Employee yang 

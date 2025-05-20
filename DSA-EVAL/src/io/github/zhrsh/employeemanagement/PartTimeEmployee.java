@@ -1,4 +1,4 @@
-package com.zhrsh.employeemanagement;
+package io.github.zhrsh.employeemanagement;
 
 /**
  * kelas PartTimeEmployee adalah subclass dari Employee yang 

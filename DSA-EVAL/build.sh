@@ -7,6 +7,6 @@ cd src
 
 for package in "${packages[@]}"; do
     echo "COMPILING AND RUNNING '"$package"' PACKAGE..."
-    javac com/zhrsh/"$package"/"$main_class".java
-    java com.zhrsh."$package"."$main_class"
+    javac io/github/zhrsh/"$package"/"$main_class".java
+    java io.github.zhrsh."$package"."$main_class" "$@"
 done

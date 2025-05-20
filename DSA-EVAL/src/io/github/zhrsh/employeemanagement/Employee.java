@@ -1,4 +1,4 @@
-package com.zhrsh.employeemanagement;
+package io.github.zhrsh.employeemanagement;
 
 /**
  * kelas Employee adalah kelas dasar (superclass) untuk semua jenis pegawai.
