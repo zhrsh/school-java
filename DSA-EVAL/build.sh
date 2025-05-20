@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-packages=(bst) # array of packages to compile
+packages=(employeemanagement sll bst) # array of packages to compile
 main_class="Main" # main class name
 
 cd src
