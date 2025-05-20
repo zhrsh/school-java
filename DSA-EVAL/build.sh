@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-packages=(employeemanagement) # array of packages to compile
+packages=(sll) # array of packages to compile
 main_class="Main" # main class name
 
 cd src
