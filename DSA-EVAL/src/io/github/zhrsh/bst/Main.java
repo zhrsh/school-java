@@ -13,19 +13,14 @@ public class Main {
         }
 
         // traversal inorder
-        System.out.println("inorder traversal dari BST:");
+        System.out.println("\ninorder traversal dari BST:");
         bst.inorder();
 
         // search
-        System.out.print("search BST: ");
+        System.out.print("\nsearch jumlah sebuah node dalam BST: ");
         Scanner scanner = new Scanner(System.in);
         int intToSearch = scanner.nextInt();
-        if (bst.search(intToSearch)) {
-            System.out.println("data exists");
-        }
-        else {
-            System.out.println("data does not exist");
-        }
+        System.out.println("jumlah node " + intToSearch + ": " + bst.search(intToSearch));
         scanner.close();
     }
 }

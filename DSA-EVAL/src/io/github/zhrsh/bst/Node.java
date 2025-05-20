@@ -6,6 +6,7 @@ package io.github.zhrsh.bst;
  */
 class Node {
     int data;
+    int count; // untuk jumlah dari node (duplicate handling)
     Node left, right;
 
     /**
@@ -15,6 +16,7 @@ class Node {
      */
     public Node(int data) {
         this.data = data;
+        this.count = 1; // init 1
         this.left = right = null;
     }
 }

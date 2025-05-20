@@ -11,15 +11,15 @@ public class BinarySearchTree {
     // fungsi rekursif untuk menyisipkan node baru
     Node insertRec(Node root, int key) {
         if (root == null) {
-            root = new Node(key);
-            return root;
+            return new Node(key);
         }
-
-        if (key < root.data)
+        if (key == root.data) {
+            root.count++; // increment count jika key is a duplicate
+        } else if (key < root.data) {
             root.left = insertRec(root.left, key);
-        else // termasuk key == root.data
+        } else {
             root.right = insertRec(root.right, key);
-
+        }
         return root;
     }
 
@@ -32,21 +32,32 @@ public class BinarySearchTree {
     void inorderRec(Node root) {
         if (root != null) {
             inorderRec(root.left);
-            System.out.print(root.data + " ");
+            if (root.count > 1) {
+                System.out.print(root.data + "(" + root.count + ")" +" ");
+            } else {
+                System.out.print(root.data + " ");
+            }
             inorderRec(root.right);
         }
     }
 
     // cari node
-    boolean search(int key) {
-        return searchRec(root, key);
+    int search(int key) {
+        Node result = searchRec(root, key);
+        if (result != null) {
+            return result.count; // return count jika ditemukan
+        } else {
+            return 0; // return 0 jika tidak ditemukan
+        }
     }
-
-    boolean searchRec(Node root, int key) {
-        if (root == null)
-            return false;
-        if (root.data == key)
-            return true;
+    
+    Node searchRec(Node root, int key) {
+        if (root == null) {
+            return null;
+        }
+        if (root.data == key) {
+            return root; // return node jika ditemukan
+        }
         if (key < root.data) {
             return searchRec(root.left, key);
         } else {
