@@ -14,7 +14,7 @@ public class BinarySearchTree {
             return new Node(key);
         }
         if (key == root.data) {
-            root.count++; // increment count jika key is a duplicate
+            root.count++; // increment count jika key duplicate
         } else if (key < root.data) {
             root.left = insertRec(root.left, key);
         } else {
