@@ -17,14 +17,13 @@ public class BinarySearchTree {
 
         if (key < root.data)
             root.left = insertRec(root.left, key);
-        else if (key > root.data)
+        else // termasuk key == root.data
             root.right = insertRec(root.right, key);
-        // jika key == root.data, kita abaikan (tidak menyisipkan duplikat)
 
         return root;
     }
 
-    // menampilkan inorder traversal (urutan terkecil ke terbesar)
+    // menampilkan inorder traversal
     void inorder() {
         inorderRec(root);
         System.out.println();
