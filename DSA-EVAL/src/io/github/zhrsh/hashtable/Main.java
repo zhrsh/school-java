@@ -1,5 +1,10 @@
 package io.github.zhrsh.hashtable;
 
+/**
+ * kelas Main untuk titik masuk program.
+ * kelas ini membuat objek HashTable, menyisipkan nama-nama, dan menampilkan tabel hash.
+ * @author Zahra A. S.
+ */
 public class Main {
     public static void main(String[] args) {
         HashTable hashTable = new HashTable(10, true);
