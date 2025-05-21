@@ -3,7 +3,7 @@ package io.github.zhrsh.hashtable;
 import java.util.LinkedList;
 // import java.lang.Math;
 
-class HashTable {
+public class HashTable {
     private LinkedList<String>[] table;
     private int size;
 
@@ -19,7 +19,7 @@ class HashTable {
 
     // hash function
     private int hash(String name) {
-        return name.length() % size; // custom hash function
+        return name.length() % size; // custom hash function sesuai diagram
         // return Math.abs(name.hashCode()) % size; // hash function lebih efisien
     }
 
