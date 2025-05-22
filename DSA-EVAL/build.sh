@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-packages=(employeemanagement sll bst hashtable) # array of packages to compile
+packages=(employeemanagement sll queue bst hashtable) # array of packages to compile
 main_class="Main" # main class name
 
 length=${#packages[@]}
