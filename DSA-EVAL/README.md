@@ -2,6 +2,8 @@
 
 All packages are placed in a reverse domain structure of my github URL (zhrsh.github.io) to follow Java conventions.
 
+This github repository was only made public after the due date. Author: Zahra A. S.
+
 ## Packages
 
 - [Employee management database](src/io/github/zhrsh/employeemanagement) (no. 1) `io.github.zhrsh.employeemanagement`
@@ -12,14 +14,16 @@ All packages are placed in a reverse domain structure of my github URL (zhrsh.gi
 
 ## Compile and Run 
 
+First, download and extract the [tar.gz](https://github.com/zhrsh/school-java/releases/download/v1.0.0/dsa-eval-zahra-a-s.tar.gz) or [zip](https://github.com/zhrsh/school-java/releases/download/v1.0.0/dsa-eval-zahra-a-s.zip) file of the source code.
+
 To compile and run all the packages consecutively, `cd` into the DSA-EVAL directory and run the build shell script I made:
 
 ```bash
-chmod +x build.sh 
+chmod +x build.sh   # not required if tar.gz 
 ./build.sh
 ```
 
-Important: This script is designed for Unix-like (Linux, MacOS, etc.) environments. While it may work on Windows using WSL, Git Bash, or Cygwin compatibility is not guaranteed.
+Important: This script is designed for Unix-like (Linux, MacOS, etc.) environments. It *may* work on Windows using WSL, git bash, or cygwin but compatibility is not guaranteed.
 
 ## File Structure
 
@@ -52,5 +56,3 @@ DSA-EVAL/
                     ├── BinarySearchTree.java
                     └── Main.java
 ```
-
-Note: This github repository was only made public after the due date.
