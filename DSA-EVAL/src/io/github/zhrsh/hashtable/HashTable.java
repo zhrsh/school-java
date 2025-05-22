@@ -1,7 +1,7 @@
 package io.github.zhrsh.hashtable;
 
 import java.util.LinkedList;
-// import java.lang.Math;
+import java.lang.Math;
 
 /**
  * kelas HashTable adalah implementasi hash table menggunakan LinkedList untuk menangani
@@ -36,8 +36,8 @@ public class HashTable {
      * @return indeks hasil hashing.
      */
     private int hash(String name) {
-        int hashedString = name.length(); // custom hash function sesuai diagram
-        // int hashedString = Math.abs(name.hashCode()); // hash function lebih efisien
+        // int hashedString = name.length(); // custom hash function sesuai diagram
+        int hashedString = Math.abs(name.hashCode()); // hash function lebih efisien
 
         int hashedStringRound = hashedString % size;
 
