@@ -15,19 +15,10 @@ public class ArrayQueue {
 
     public void enqueue(int data) {
         if (rear == capacity) {
-            System.out.println("queue is full");
+            System.out.println("queue penuh");
             return;
         }
         queue[rear++] = data;
-    }
-
-    public void dequeue() {
-        if (front == rear) {
-            System.out.println("queue kosong");
-            return;
-        }
-        System.out.println("dequeued: " + queue[front]);
-        front++;
     }
 
     public void display() {
@@ -40,5 +31,22 @@ public class ArrayQueue {
             System.out.print(queue[i] + " ");
         }
         System.out.println();
+    }
+
+    // menghapus nilai tertentu (e. g., 92)
+    public void removeValue(int value) {
+        int[] newQueue = new int[capacity];
+        int newRear = 0;
+
+        for (int i = front; i < rear; i++) {
+            if (queue[i] != value) {
+                newQueue[newRear++] = queue[i];
+            }
+        }
+
+        // reset state
+        queue = newQueue;
+        front = 0;
+        rear = newRear;
     }
 }

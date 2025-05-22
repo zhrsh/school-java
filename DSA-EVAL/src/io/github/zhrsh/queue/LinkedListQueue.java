@@ -13,25 +13,26 @@ public class LinkedListQueue {
     // add element to the rear
     public void enqueue(int data) {
         queue.offer(data);
-        System.out.println("Enqueued: " + data);
     }
 
-    // remove element from the front
-    public void dequeue() {
-        Integer removed = queue.poll();
-        if (removed == null) {
-            System.out.println("Queue is empty");
-        } else {
-            System.out.println("Dequeued: " + removed);
+    // menghapus semua nilai tertentu (e. g., 92)
+    public void removeValue(int value) {
+        Queue<Integer> temp = new LinkedList<>();
+        while (!queue.isEmpty()) {
+            int current = queue.poll();
+            if (current != value) {
+                temp.offer(current);
+            }
         }
+        queue = temp;
     }
 
     // display the elements in the queue
     public void display() {
         if (queue.isEmpty()) {
-            System.out.println("Queue is empty");
+            System.out.println("queue kosong");
         } else {
-            System.out.println("Queue elements: " + queue);
+            System.out.println("isi queue: " + queue);
         }
     }
 }
