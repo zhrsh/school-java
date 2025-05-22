@@ -1,5 +1,9 @@
 package io.github.zhrsh.queue;
 
+/**
+ * kelas ini berisi metode utama untuk menjalankan percobaan antrian berbasis array dan linked list.
+ * @author Zahra A. S.
+ */
 public class Main {
     public static void main(String[] args) {
         int[] data = {39, 88, 102, 64, 128, 113, 124, 248, 46, 39, 92, 117, 184, 351, 52, 60, 104, 77, 208, 94};

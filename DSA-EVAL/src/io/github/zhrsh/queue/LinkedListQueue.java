@@ -3,19 +3,34 @@ package io.github.zhrsh.queue;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * kelas ini merepresentasikan queue menggunakan linkedlist.
+ * @author Zahra A. S.
+ */
 public class LinkedListQueue {
     private Queue<Integer> queue;
 
+    /**
+     * konstruktor untuk menginisialisasi queue.
+     */
     public LinkedListQueue() {
         queue = new LinkedList<>();
     }
 
-    // add element to the rear
+    /**
+     * menambahkan elemen ke bagian belakang queue.
+     *
+     * @param data elemen yang akan ditambahkan ke queue.
+     */
     public void enqueue(int data) {
         queue.offer(data);
     }
 
-    // menghapus semua nilai tertentu (e. g., 92)
+    /**
+     * menghapus semua instance nilai tertentu dari queue.
+     *
+     * @param value nilai yang akan dihapus dari queue.
+     */
     public void removeValue(int value) {
         Queue<Integer> temp = new LinkedList<>();
         while (!queue.isEmpty()) {
@@ -27,7 +42,9 @@ public class LinkedListQueue {
         queue = temp;
     }
 
-    // display the elements in the queue
+    /**
+     * menampilkan elemen-elemen dalam queue.
+     */
     public void display() {
         if (queue.isEmpty()) {
             System.out.println("queue kosong");

@@ -1,11 +1,20 @@
 package io.github.zhrsh.queue;
 
+/**
+ * kelas ini merepresentasikan queue menggunakan array.
+ * @author Zahra A. S.
+ */
 public class ArrayQueue {
     private int[] queue;
     private int front;
     private int rear;
     private int capacity;
 
+    /**
+     * konstruktor untuk menginisialisasi queue dengan ukuran tertentu.
+     *
+     * @param size ukuran maksimum queue.
+     */
     public ArrayQueue(int size) {
         capacity = size;
         queue = new int[capacity];
@@ -13,6 +22,11 @@ public class ArrayQueue {
         rear = 0;
     }
 
+    /**
+     * menambahkan elemen ke queue.
+     *
+     * @param data elemen yang akan ditambahkan ke queue.
+     */
     public void enqueue(int data) {
         if (rear == capacity) {
             System.out.println("queue penuh");
@@ -21,6 +35,9 @@ public class ArrayQueue {
         queue[rear++] = data;
     }
 
+    /**
+     * menampilkan elemen-elemen dalam queue.
+     */
     public void display() {
         if (front == rear) {
             System.out.println("queue kosong");
@@ -33,7 +50,11 @@ public class ArrayQueue {
         System.out.println();
     }
 
-    // menghapus nilai tertentu (e. g., 92)
+    /**
+     * menghapus semua kemunculan nilai tertentu dari queue.
+     *
+     * @param value nilai yang akan dihapus dari queue.
+     */
     public void removeValue(int value) {
         int[] newQueue = new int[capacity];
         int newRear = 0;
