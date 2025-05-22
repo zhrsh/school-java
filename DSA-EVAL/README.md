@@ -12,11 +12,45 @@ All packages are placed in a reverse domain structure of my github URL (zhrsh.gi
 
 ## Compile and Run 
 
-To compile and run all the above packages consecutively, run the build shell script I made:
+To compile and run all the packages consecutively, `cd` into the DSA-EVAL directory and run the build shell script I made:
 
 ```bash
 chmod +x build.sh 
 ./build.sh
+```
+
+Important: This script is designed for Unix-like (Linux, MacOS, etc.) environments. While it may work on Windows using WSL, Git Bash, or Cygwin compatibility is not guaranteed.
+
+## File Structure
+
+```bash
+DSA-EVAL/
+├── README.md
+├── build.sh
+└── src/
+    └── io/
+        └── github/
+            └── zhrsh/
+                ├── sll/                # no 2
+                │   ├── Node.java
+                │   ├── SinglyLinkedList.java
+                │   └── Main.java
+                ├── queue/              # no 3
+                │   ├── ArrayQueue.java
+                │   ├── LinkedListQueue.java
+                │   └── Main.java
+                ├── hashtable/          # no 5
+                │   ├── Main.java
+                │   └── HashTable.java
+                ├── employeemanagement/ # no 1
+                │   ├── PartTimeEmployee.java
+                │   ├── Main.java
+                │   ├── FullTimeEmployee.java
+                │   └── Employee.java
+                └── bst/                # no 4
+                    ├── Node.java
+                    ├── BinarySearchTree.java
+                    └── Main.java
 ```
 
 Note: This github repository was only made public after the due date.
